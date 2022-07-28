@@ -4,18 +4,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    public TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -38,6 +38,9 @@ public class TreeNode {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode temp = queue.poll();
+                if (temp == null) {
+                    return;
+                }
                 System.out.print(temp.val + " ");
                 if (temp.left != null) {
                     queue.offer(temp.left);
