@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Q7 {
+public class Q10 {
     private static int count(int[] nums) {
         int sum = 0;
         HashMap<Integer, List<Integer>> data = new HashMap<>();
